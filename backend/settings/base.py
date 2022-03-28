@@ -145,6 +145,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticateOrReadOnly',
+        # modo leitura caso não usuário não esteja logado
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     )
 }

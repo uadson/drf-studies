@@ -2,6 +2,8 @@ from django.db import models
 
 
 class Base(models.Model):
+    """Abstract Class
+    """
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=True)
@@ -11,6 +13,14 @@ class Base(models.Model):
 
 
 class Course(Base):
+    """Class Course
+
+    Args:
+        Base: Class Abstract
+
+    Returns:
+        str: title
+    """
     title = models.CharField(max_length=100)
     url = models.URLField(unique=True)
 
@@ -23,6 +33,14 @@ class Course(Base):
 
 
 class Exam(Base):
+    """Class Exam
+
+    Args:
+        Base: abstract
+
+    Returns:
+        str: name, course and evaluation
+    """
     course = models.ForeignKey(Course, related_name='exams', on_delete=models.CASCADE)
     name = models.CharField(max_length=150)
     email = models.EmailField()
