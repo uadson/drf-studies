@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     'basic',
+    'intermediary',
 
     # 3rd Apps
     'rest_framework',

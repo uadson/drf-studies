@@ -10,4 +10,7 @@ urlpatterns = [
 
     # URLs Basic (endpoints)
     path('api/basic/v1/', include('basic.urls', namespace='basic')),
+
+    # URLs Intermediary (endpoints)
+    path('api/interm/v1/', include('intermediary.urls', namespace='intermediary')),
 ]
