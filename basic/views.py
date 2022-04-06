@@ -7,7 +7,7 @@ from basic.models import Course, Exam
 from basic.serializers import CourseSerializer, ExamSerializer
 
 
-class CourseAPIView(APIView):
+class CourseAPIViewBasic(APIView):
     """
     API of Courses
     """
@@ -24,7 +24,7 @@ class CourseAPIView(APIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
-class ExamAPIView(APIView):
+class ExamAPIViewBasic(APIView):
     """
     API of Exams
     """

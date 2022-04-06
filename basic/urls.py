@@ -1,14 +1,14 @@
 from django.urls import path
 
-from basic.views import CourseAPIView, ExamAPIView
+from basic.views import CourseAPIViewBasic, ExamAPIViewBasic
 
 
 app_name = 'basic'
 
 urlpatterns = [
     # API Courses
-    path('courses/', CourseAPIView.as_view(), name='courses'),
+    path('courses/', CourseAPIViewBasic.as_view(), name='courses_basic'),
 
     # API Exams
-    path('exams/', ExamAPIView.as_view(), name='exams'),
+    path('exams/', ExamAPIViewBasic.as_view(), name='exams_basic'),
 ]
