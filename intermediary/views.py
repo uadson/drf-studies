@@ -1,7 +1,7 @@
 from rest_framework.generics import get_object_or_404
 from rest_framework import generics
 
-from basic.models import Course, Exam
+from basic.models.base import Course, Exam
 
 from basic.serializers import CourseSerializer, ExamSerializer
 
