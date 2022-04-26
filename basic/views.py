@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from basic.models import Course, Exam
+from basic.models.base import Course, Exam
 
 from basic.serializers import CourseSerializer, ExamSerializer
 
