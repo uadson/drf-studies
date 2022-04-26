@@ -33,7 +33,7 @@ class ExamsByCourseAPIViewInterm(generics.ListCreateAPIView):
     serializer_class = ExamSerializer
 
     def get_queryset(self):
-        # return a objects list
+        # return a list of objects
 
         if self.kwargs.get('course_pk'):
             return self.queryset.filter(course_id=self.kwargs.get('course_pk'))
