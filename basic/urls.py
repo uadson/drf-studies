@@ -1,6 +1,7 @@
 from django.urls import path
 
-from basic.views import CourseAPIViewBasic, ExamAPIViewBasic
+from basic.views.courses import CourseAPIViewBasic
+from basic.views.exams import ExamAPIViewBasic
 
 
 app_name = 'basic'
