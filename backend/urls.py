@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
 
+from intermediary_v2.urls import router
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,4 +15,7 @@ urlpatterns = [
 
     # URLs Intermediary (endpoints)
     path('api/interm/v1/', include('intermediary.urls', namespace='intermediary')),
+
+    # URLs Intermediary v2 (automatic endpoints)
+    path('api/interm/v2/', include(router.urls)),
 ]
