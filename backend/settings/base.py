@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'django_seed',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -142,12 +143,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # DRF SETUP
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        # modo leitura caso não usuário não esteja logado
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-    )
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.SessionAuthentication',
+#     ),
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         # modo leitura caso não usuário não esteja logado
+#         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+#     )
+# }

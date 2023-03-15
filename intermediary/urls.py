@@ -24,6 +24,6 @@ urlpatterns = [
     path('exams/<int:pk>/', ExamsRetrieveUpdateDestroyAPIView.as_view(), name='exams_rud'),
 
     # Exams/Exam by Course
-    path('courses/<int:course_pk>/exams', ExamsByCourseAPIView.as_view(), name='exams_by_course_id'),
+    path('courses/<int:course_pk>/exams/', ExamsByCourseAPIView.as_view(), name='exams_by_course_id'),
     path('courses/<int:course_pk>/exams/<int:exam_pk>/', ExamByCourseAPIView.as_view(), name='exam_by_course_id'),
 ]
