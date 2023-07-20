@@ -1,6 +1,7 @@
 from django_seed import Seed
 
-from basic.models import Course, Exam
+from basic.models.course import Course
+from basic.models.exam import Exam
 
 seeder = Seed.seeder()
 seeder.add_entity(Course, 10)
