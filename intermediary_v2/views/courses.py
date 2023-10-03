@@ -18,6 +18,7 @@ class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
     
+    
     @action(detail=True, methods=['GET'])
     def exams(self, request, pk=None):
         """

@@ -11,11 +11,11 @@ urlpatterns = [
     path('api/auth/', include('rest_framework.urls')),
 
     # URLs Basic (endpoints)
-    path('api/basic/v1/', include('basic.urls', namespace='basic')),
+    path('api/v1/basic/', include('basic.urls', namespace='basic')),
 
     # URLs Intermediary (endpoints)
-    path('api/interm/v1/', include('intermediary.urls', namespace='intermediary')),
+    path('api/v1/interm/', include('intermediary.urls', namespace='intermediary')),
 
     # URLs Intermediary v2 (automatic endpoints)
-    path('api/interm/v2/', include(router.urls)),
+    path('api/v2/interm/', include(router.urls)),
 ]
